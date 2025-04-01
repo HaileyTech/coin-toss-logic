@@ -68,6 +68,28 @@
 //     console.log(randNum);
 // }
 
-function flipCoin() {
+function flipCoin(side) {
     
+    let choice = document.getElementById("choice"); // players selection (button choice)
+
+    let result = document.getElementById("result"); // game result
+
+    let flip = document.getElementById("flip"); // what the coin landed on
+    let rand = Math.ceil(Math.random() * 2); // random computer flip
+
+    if (rand == 1) {
+        flip.innerText = "Heads"
+    } else {
+        flip.innerText = "Tails"
+    }
+
+    let status
+    if (side === flip.innerText) {
+        status = "Won"
+    } else {
+        status = "Lost"
+    }
+
+    choice.innerText = side; // display what the player chose 
+    result.innerText = status; // display if the player won or lost
 }
