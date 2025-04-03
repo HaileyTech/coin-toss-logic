@@ -30,16 +30,18 @@ function flipCoin(side) {
 
     choice.innerText = side // display what the player chose 
     result.innerText = status // display if the player won or lost
-    displayWon.innerText = gamesWon; // display the current number of wins
-    displayLost.innerText = gamesLost; // display the current number of losses
-    displayPlayed.innerText = gamesPlayed; // displays number of games played
+    displayWon.innerText = gamesWon // display the current number of wins
+    displayLost.innerText = gamesLost // display the current number of losses
+    displayPlayed.innerText = gamesPlayed // displays number of games played
 }
 
 function resetScore() {
   gamesWon = 0;
   gamesLost = 0;
   gamesPlayed = 0;
-  displayWon.innerText = gamesWon; // display the current number of wins
-  displayLost.innerText = gamesLost; // display the current number of losses
-  displayPlayed.innerText = gamesPlayed; // displays number of games played
+
+  // 
+  displayWon.innerText = gamesWon
+  displayLost.innerText = gamesLost
+  displayPlayed.innerText = gamesPlayed
 }
