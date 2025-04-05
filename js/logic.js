@@ -11,23 +11,25 @@ function flipCoin(side) {
     let flip = document.getElementById("flip") // what the coin landed on
     let rand = Math.ceil(Math.random() * 2) // random computer flip
 
+    let flipResult;
     if (rand == 1) {
-        flip.innerText = "Heads"
+        flipResult = "Heads";
     } else {
-        flip.innerText = "Tails"
+        flipResult = "Tails";
     }
 
     let status
-    if (side === flip.innerText) {
-        status = "Won"
-        gamesWon++ // increment the numbe of wins
+    if (side == flipResult) {
+        status = "Won";
+        gamesWon++; // increment the numbe of wins
     } else {
-        status = "Lost"
+        status = "Lost";
         gamesLost++;
     }
 
     gamesPlayed++
 
+    flip.innerText = flipResult;
     choice.innerText = side // display what the player chose 
     result.innerText = status // display if the player won or lost
     displayWon.innerText = gamesWon // display the current number of wins
@@ -36,12 +38,11 @@ function flipCoin(side) {
 }
 
 function resetScore() {
-  gamesWon = 0;
-  gamesLost = 0;
-  gamesPlayed = 0;
+    gamesWon = 0;
+    gamesLost = 0;
+    gamesPlayed = 0;
 
-  // 
-  displayWon.innerText = gamesWon
-  displayLost.innerText = gamesLost
-  displayPlayed.innerText = gamesPlayed
+    displayWon.innerText = gamesWon
+    displayLost.innerText = gamesLost
+    displayPlayed.innerText = gamesPlayed
 }
